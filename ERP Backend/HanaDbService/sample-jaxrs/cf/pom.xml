@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sap.orca.starter.sample</groupId>
+	<artifactId>sample-jaxrs-cf</artifactId>
+	<version>1.1.1</version>
+	<packaging>war</packaging>
+	<!--<packaging>jar</packaging>-->
+
+	<parent>
+		<groupId>com.sap.orca</groupId>
+		<artifactId>orca-starter-service-parent-cf</artifactId>
+		<version>2018.06.1</version>
+	</parent>
+	
+	<properties>
+        <spring.boot.mainclass>com.sap.orca.starter.sample.jaxrs.JaxRsApp</spring.boot.mainclass>
+    </properties>
+
+	<build>
+		<finalName>samplejaxrs-cf</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<mainClass>${spring.boot.mainclass}</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+            </plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sap.orca.starter.sample</groupId>
+			<artifactId>sample-jaxrs-code</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+     </dependencies>
+
+</project>

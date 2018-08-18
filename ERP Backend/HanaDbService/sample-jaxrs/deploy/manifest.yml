@@ -1,0 +1,15 @@
+---
+applications:
+- name: samplejaxrs
+  host: eran-samplejaxrs-dev-fpa36
+  path: ../cf/target/samplejaxrs-cf.war
+#  path: ../cf/target/samplejaxrs-cf.jar
+  memory: 1G
+  random-route: false
+  services:
+      - orca-uaa
+      - orca-env
+      - orca-dynatrace
+  env:
+      SAP_JWT_TRUST_ACL: "[ {\"clientid\" : \"*\", \"identityzone\" : \"*\"} ]"
+      DT_LOGSTREAM: stdout

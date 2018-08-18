@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sap.orca.starter.sample</groupId>
+	<artifactId>sample-jaxrs</artifactId>
+	<version>1.1.1</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>com.sap.orca</groupId>
+		<artifactId>orca-starter-service-parent-multipom</artifactId>
+		<version>2018.06.1</version>
+		<relativePath></relativePath>
+	</parent>
+
+	<modules>
+		<module>code</module>
+	    <module>cf</module>
+	    <module>hcp</module>
+	</modules>
+</project>

@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sap.orca.starter.sample</groupId>
+	<artifactId>sample-jaxrs-hcp</artifactId>
+	<version>1.1.1</version>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>com.sap.orca</groupId>
+		<artifactId>orca-starter-service-parent-hcp</artifactId>
+		<version>2018.06.1</version>
+	</parent>
+
+	<build>
+		<finalName>samplejaxrs-hcp</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+            </plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.sap.orca.starter.sample</groupId>
+			<artifactId>sample-jaxrs-code</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+		<groupId>com.sap.orca</groupId>
+		<artifactId>orca-starter-security-hcp</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>com.sap.orca</groupId>
+		<artifactId>orca-starter-data-hcp</artifactId>
+	</dependency>
+     </dependencies>
+
+</project>
